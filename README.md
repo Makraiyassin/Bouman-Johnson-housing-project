@@ -1,6 +1,6 @@
 # Bouman-Johnson-housing-project
 
-## Objectifs de la mission
+## Objectifs du projet
 
 Vous travaillez pour une société de logement appelée "ImmoEliza". Vous avez été contacté par le service R & D / AI de votre entreprise car ils ont besoin de vos compétences.
 
