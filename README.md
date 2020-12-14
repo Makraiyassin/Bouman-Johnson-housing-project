@@ -33,7 +33,7 @@ Vous serez affecté à un référent IA. ils ne seront pas à vos côtés tout l
 
 ## Quand ?
   
-lundi 14/12/2020 au mardi 15/12/2020
+Du lundi 14/12/2020 au mardi 15/12/2020
 
 ## Qui ?
 
