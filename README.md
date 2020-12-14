@@ -31,12 +31,15 @@ déployez votre application à l'aide d'un fournisseur d'hébergement que vous n
 
 Vous serez affecté à un référent IA. ils ne seront pas à vos côtés tout le temps, mais ils ont reçu des informations claires sur le fait de tout laisser tomber et viennent répondre à vos questions pendant ces deux jours! Utilisez leurs connaissances chaque fois que vous sentez que le problème est lié à l'API et non au développement Web :)
 
-## Livrables
+## Quand ?
+  
+lundi 14/12/2020 au mardi 15/12/2020
 
-Publiez votre code source sur le référentiel GitHub.
-Pimpez le fichier readme:
-  - Quoi, pourquoi, quand, comment, qui.
-  
-  - En attente de choses à faire
-  
-  - Il doit contenir un lien vers la version "live". La version "live" doit contenir un lien vers le code source sur GitHub. 3.EXTRA: Publiez le lien vers le "live".
+## Qui ?
+
+Yassin Makrai : web developer junior section johnson 5.25
+Saba : stagiaire en AI section bouman
+
+## Où ?
+
+[cliquez ici pour voir le résultat ^^](http://google.be)
