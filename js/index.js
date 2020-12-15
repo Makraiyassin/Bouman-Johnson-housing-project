@@ -37,13 +37,13 @@ document.querySelector("#go").addEventListener("click",function(event){
     if (document.querySelector("#area").value == false) {
         document.querySelector("#divarea").insertAdjacentHTML("afterend",`<p class="error" style="color:red">veuillez remplir ce champ</p>`)
     }
-    if (document.querySelector("#zip").value == false || (zipcode < 1000 || zipcode > 9999 )) {
+    if (document.querySelector("#zip").value == false || zipcode < 1000 || zipcode > 9999 ){
         document.querySelector("#divzip").insertAdjacentHTML("afterend",`<p class="error" style="color:red">veuillez remplir ce champ avec un code postal valable (en quatre chiffres)</p>`)
     }
     if (document.querySelector("#room").value == false) {
         document.querySelector("#divroom").insertAdjacentHTML("afterend",`<p class="error" style="color:red">veuillez remplir ce champ</p>`)
     }
-    if (document.querySelector("#area").value != false && document.querySelector("#zip").value != false && document.querySelector("#room").value != false ||(zipcode < 1000 || zipcode > 9999 )) {
+    if (document.querySelector("#area").value != false && document.querySelector("#zip").value != false && document.querySelector("#room").value != false && zipcode > 1000 && zipcode < 9999 ){
 
         let info = {
             data:{
