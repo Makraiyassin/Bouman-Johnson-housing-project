@@ -1,9 +1,10 @@
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
 // const url = "https://becode-predict-ades.herokuapp.com/predict"; //API Saba
+// {"0":{"property-type":"APARTMENT","rooms-number":2,"zip-code":1000,"full-address":"","facades-number":2,"area":150}} // API Saba
+
 const url = "http://roberta-eliza.herokuapp.com/predict"; //API Luis
 
 
-// {"0":{"property-type":"APARTMENT","rooms-number":2,"zip-code":1000,"full-address":"","facades-number":2,"area":150}} // API Saba
 
 document.querySelector("#go").addEventListener("click",function(){
 
@@ -42,23 +43,6 @@ document.querySelector("#go").addEventListener("click",function(){
             "facades-number":2
         }
     }
-
-    // let info2 = {
-    //     data:{
-    //         "property-type": "APARTEMENT",
-    //         "area": 200,
-    //         "rooms-number": 2,
-    //         "zip-code": 1030,
-    //         "garden": true,
-    //         "equipped-kitchen": true,
-    //         "swimmingpool": false,
-    //         "terrace": true,
-    //         "building-state": "NEW",
-    //         "full-address":"",
-    //         "facades-number":2
-    //     }
-    // }
-
     
     fetch(proxyurl + url, {
         method: 'POST', 
