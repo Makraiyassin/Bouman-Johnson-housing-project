@@ -1,35 +1,9 @@
 const proxyurl = "https://cors-anywhere.herokuapp.com/";
-const url = "https://becode-predict-ades.herokuapp.com/predict";
-
-// fetch(proxyurl + url)
-// .then(response => response)
-// .then(data => {
-//     console.log(data)
-// })
-// .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-
-//====================================================================================================
-
-// fetch(proxyurl + url)
-// .then(response => response.text())
-// .then(data => {
-//     console.log(data)
-// })
-// .catch(() => console.log("It's not ok, Can’t access " + url + " response. Blocked by browser?"))
-
-//====================================================================================================
-
-// fetch(proxyurl + url)
-// .then(response => response.json())
-// .then(data => {
-//     console.log(data)
-// })
-// .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))
-
-//=====================================================================================================
+// const url = "https://becode-predict-ades.herokuapp.com/predict"; //API Saba
+const url = "http://roberta-eliza.herokuapp.com/predict"; //API Luis
 
 
-// {"0":{"property-type":"APARTMENT","rooms-number":2,"zip-code":1000,"full-address":"","facades-number":2,"area":150}}
+// {"0":{"property-type":"APARTMENT","rooms-number":2,"zip-code":1000,"full-address":"","facades-number":2,"area":150}} // API Saba
 
 document.querySelector("#go").addEventListener("click",function(){
 
@@ -69,21 +43,21 @@ document.querySelector("#go").addEventListener("click",function(){
         }
     }
 
-    let info2 = {
-        data:{
-            "property-type": "APARTEMENT",
-            "area": 200,
-            "rooms-number": 2,
-            "zip-code": 1030,
-            "garden": true,
-            "equipped-kitchen": true,
-            "swimmingpool": false,
-            "terrace": true,
-            "building-state": "NEW",
-            "full-address":"",
-            "facades-number":2
-        }
-    }
+    // let info2 = {
+    //     data:{
+    //         "property-type": "APARTEMENT",
+    //         "area": 200,
+    //         "rooms-number": 2,
+    //         "zip-code": 1030,
+    //         "garden": true,
+    //         "equipped-kitchen": true,
+    //         "swimmingpool": false,
+    //         "terrace": true,
+    //         "building-state": "NEW",
+    //         "full-address":"",
+    //         "facades-number":2
+    //     }
+    // }
 
     
     fetch(proxyurl + url, {
@@ -91,11 +65,12 @@ document.querySelector("#go").addEventListener("click",function(){
         body: JSON.stringify(info), 
         headers: {'Content-Type': 'application/json'}
     })
-
     .then(response => response.json())
     .then(data => {
-        console.log(data.prediction[0]);
-        document.querySelector("#go").insertAdjacentHTML("afterend",`<p id="price">price: ${data.prediction[0]} € </p>`)
+        console.log(data);
+        // document.querySelector("#go").insertAdjacentHTML("afterend",`<p id="price">price: ${data.prediction[0]} € </p>`) //API Saba
+        document.querySelector("#go").insertAdjacentHTML("afterend",`<p id="price">price: ${data.prediction.price} € </p>`)
+
     })
     .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))    
 })
