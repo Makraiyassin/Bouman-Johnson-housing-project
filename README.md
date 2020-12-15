@@ -42,4 +42,4 @@ Saba : stagiaire en AI section bouman
 
 ## Où ?
 
-[cliquez ici pour voir le résultat ^^](http://google.be)
+[cliquez ici pour voir le résultat ^^](https://makraiyassin.github.io/Bouman-Johnson-housing-project/)
