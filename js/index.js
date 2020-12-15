@@ -61,7 +61,7 @@ document.querySelector("#go").addEventListener("click",function(event){
             }
         }
         
-        fetch(url, {
+        fetch(proxyurl + url, {
             method: 'POST', 
             body: JSON.stringify(info), 
             headers: {'Content-Type': 'application/json'}
