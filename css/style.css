@@ -1,0 +1,26 @@
+
+body{
+    background-image: url(../image/city.jpg);
+    background-size: cover;
+}
+
+h1{
+    color: #edb6b6;
+}
+
+h2{
+    color: #a5b8eb;
+}
+
+#formulaire{
+    width: 95%;
+    margin: auto;
+}
+
+#price{
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 5px;
+    background-color: rgb(51, 51, 51);
+}
