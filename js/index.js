@@ -25,7 +25,7 @@ document.querySelector("#go").addEventListener("click",function(event){
     let state = document.querySelector("#state").value;
 
     // console.log(area);
-    // console.log(zipcode);
+    console.log(zipcode);
     // console.log(rooms);
     // console.log(propertytype);
     // console.log(garden);
