@@ -27,17 +27,17 @@
                 </select>
                 <br>
                 <label for="area" class="form-label">Area:</label>
-                <div class="mb-3 input-group">
+                <div id="divarea" class="mb-3 input-group">
                     <input type="number" class="form-control text-center" id="area" name="area" required>
                     <span class="input-group-text">m²</span> 
                 </div>
                 <br>
-                <div class="mb-3">
+                <div id="divroom" class="mb-3">
                     <label for="room" class="form-label">How many rooms do you want?</label>
                     <input type="number" class="form-control text-center" id="room" name="room" required>
                 </div>
                 <label for="zip" class="form-label">zip-code:</label>
-                <div class="mb-3">
+                <div id="divzip" class="mb-3">
                     <input type="number" maxlength="4" class="form-control text-center" id="zip" name="zip" required> 
                 </div>
                 <label for="garden" class="form-label">Do you want a garden (optional)?</label>
@@ -71,7 +71,7 @@
                     <option value="TO RENOVATE">To renovate</option>
                 </select>
                 <br>
-                <input type="" class="btn btn-primary" name="go" id="go" value="GO">
+                <input type="submit" class="btn btn-primary" name="go" id="go" value="GO">
                 <br>
                 <br>
             </form>

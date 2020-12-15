@@ -6,7 +6,13 @@ const url = "http://roberta-eliza.herokuapp.com/predict"; //API Luis
 
 
 
-document.querySelector("#go").addEventListener("click",function(){
+document.querySelector("#go").addEventListener("click",function(event){
+
+    document.querySelectorAll(".error").forEach(element => {
+        element.remove()
+    });
+
+    event.preventDefault();
 
     let propertytype = document.querySelector("#type").value;
     let area = parseInt(document.querySelector("#area").value);
@@ -28,34 +34,48 @@ document.querySelector("#go").addEventListener("click",function(){
     // console.log(terrace);
     // console.log(state);
 
-    let info = {
-        data:{
-            "property-type": propertytype,
-            "area": area,
-            "rooms-number": rooms,
-            "zip-code": zipcode,
-            "garden": garden,
-            "equipped-kitchen": kitchen,
-            "swimmingpool": swimmingpool,
-            "terrace": terrace,
-            "building-state": state,
-            "full-address":"",
-            "facades-number":2
-        }
+    if (document.querySelector("#area").value == false) {
+        document.querySelector("#divarea").insertAdjacentHTML("afterend",`<p class="error" style="color:red">veuillez remplir ce champ</p>`)
     }
-    
-    fetch(proxyurl + url, {
-        method: 'POST', 
-        body: JSON.stringify(info), 
-        headers: {'Content-Type': 'application/json'}
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log(data);
-        // document.querySelector("#go").insertAdjacentHTML("afterend",`<p id="price">price: ${data.prediction[0]} € </p>`) //API Saba
-        document.querySelector("#go").insertAdjacentHTML("afterend",`<p id="price">price: ${data.prediction.price} € </p>`)
+    if (document.querySelector("#zip").value == false || (zipcode < 1000 || zipcode > 9999 )) {
+        document.querySelector("#divzip").insertAdjacentHTML("afterend",`<p class="error" style="color:red">veuillez remplir ce champ avec un code postal valable (en quatre chiffres)</p>`)
+    }
+    if (document.querySelector("#room").value == false) {
+        document.querySelector("#divroom").insertAdjacentHTML("afterend",`<p class="error" style="color:red">veuillez remplir ce champ</p>`)
+    }
+    if (document.querySelector("#area").value != false && document.querySelector("#zip").value != false && document.querySelector("#room").value != false ||(zipcode < 1000 || zipcode > 9999 )) {
 
-    })
-    .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))    
+        let info = {
+            data:{
+                "property-type": propertytype,
+                "area": area,
+                "rooms-number": rooms,
+                "zip-code": zipcode,
+                "garden": garden,
+                "equipped-kitchen": kitchen,
+                "swimmingpool": swimmingpool,
+                "terrace": terrace,
+                "building-state": state,
+                "full-address":"",
+                "facades-number":2
+            }
+        }
+        
+        fetch(proxyurl + url, {
+            method: 'POST', 
+            body: JSON.stringify(info), 
+            headers: {'Content-Type': 'application/json'}
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data);
+            // document.querySelector("#go").insertAdjacentHTML("afterend",`<p id="price">price: ${data.prediction[0]} € </p>`) //API Saba
+            document.querySelector("#go").insertAdjacentHTML("afterend",`<p id="price">price: ${data.prediction.price} € </p>`)
+
+        })
+        .catch(() => console.log("Can’t access " + url + " response. Blocked by browser?"))     
+    }else{
+        document.querySelector("#go").insertAdjacentHTML("afterend",`<p class="error" style="color:red">veuillez remplir correctement tous les champs</p>`)
+    }   
 })
 
