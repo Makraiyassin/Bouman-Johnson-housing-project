@@ -5,20 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
 
     <title>Bouman-Johnson-housing-project</title>
 </head>
 <body>
-    <div class="m-auto text-center bg-secondary text-light w-50 m-auto">
-        <h1>ImmoEliza</h1>
+    <div id="container" class="m-auto text-center text-dark fw-bold w-50 m-auto rounded">
+        <img id="logo" src="image/immoelisa.png" alt="logo">
         <h2>Prediction: price of your ideal accommodation</h2>
         <br>
         <div id="formulaire">
             <form>
                 <select id="type" class="form-select" aria-label="typeAccommodation" style="background-color: rgb(207, 209, 212);">
-                    <option selected  value="apartment">Select the type of accommodation you want</option>
-                    <option  value="apartment">Apartement</option> <!-- API SABA: APARTEMENT, HOUSE, OTHERS -->
+                    <option selected  value="apartment">Select the type of accommodation you want</option> <!-- API SABA: APARTEMENT, HOUSE, OTHERS -->
+                    <option  value="apartment">Apartement</option> 
                     <option  value="house">House</option>
                     <option  value="others">Others</option>
                 </select>
@@ -35,7 +38,7 @@
                 </div>
                 <label for="zip" class="form-label">zip-code:</label>
                 <div class="mb-3">
-                    <input type="number" class="form-control text-center" id="zip" name="zip" required> 
+                    <input type="number" maxlength="4" class="form-control text-center" id="zip" name="zip" required> 
                 </div>
                 <label for="garden" class="form-label">Do you want a garden (optional)?</label>
                 <select id="garden" class="form-select" aria-label="garden">

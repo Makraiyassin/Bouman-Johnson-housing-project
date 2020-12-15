@@ -2,14 +2,21 @@
 body{
     background-image: url(../image/city.jpg);
     background-size: cover;
+    padding: 5%;
 }
 
-h1{
-    color: #edb6b6;
+#container{
+    background-color: #ffffff82;
+}
+
+#logo{
+    width: 25%;
+    padding: 2%;
 }
 
 h2{
-    color: #a5b8eb;
+    font-family: 'Dancing Script', cursive;
+    font-weight: bold !important;
 }
 
 #formulaire{
