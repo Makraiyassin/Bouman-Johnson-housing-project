@@ -7,7 +7,6 @@ const url = "http://roberta-eliza.herokuapp.com/predict"; //API Luis
 
 
 document.querySelector("#go").addEventListener("click",function(event){
-
     document.querySelectorAll(".error").forEach(element => {
         element.remove()
     });
@@ -47,6 +46,7 @@ document.querySelector("#go").addEventListener("click",function(event){
 
         let info = {
             data:{
+                // "property-type": "APARTMENT", //API Saba
                 "property-type": propertytype,
                 "area": area,
                 "rooms-number": rooms,

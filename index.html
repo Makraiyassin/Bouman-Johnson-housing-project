@@ -13,14 +13,14 @@
     <title>Bouman-Johnson-housing-project</title>
 </head>
 <body>
-    <div id="container" class="m-auto text-center text-dark fw-bold w-50 m-auto rounded">
+    <div id="container" class="m-auto text-center text-dark fw-bold m-auto rounded">
         <img id="logo" src="image/immoelisa.png" alt="logo">
         <h2>Prediction: price of your ideal accommodation</h2>
         <br>
         <div id="formulaire">
             <form>
                 <select id="type" class="form-select" aria-label="typeAccommodation" style="background-color: rgb(207, 209, 212);">
-                    <option selected  value="apartment">Select the type of accommodation you want</option> <!-- API SABA: APARTEMENT, HOUSE, OTHERS -->
+                    <option selected  value="apartment">Select the type of accommodation you want</option>
                     <option  value="apartment">Apartement</option> 
                     <option  value="house">House</option>
                     <option  value="others">Others</option>
@@ -31,7 +31,6 @@
                     <input type="number" class="form-control text-center" id="area" name="area" required>
                     <span class="input-group-text">m²</span> 
                 </div>
-                <br>
                 <div id="divroom" class="mb-3">
                     <label for="room" class="form-label">How many rooms do you want?</label>
                     <input type="number" class="form-control text-center" id="room" name="room" required>
